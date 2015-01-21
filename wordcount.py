@@ -27,11 +27,12 @@ def print_word_counts(a_dictionary):
     """This can take the output of word_occurrence_dict and prettify it 
     to print out."""
 
-    for each_item in a_dictionary.items():
-        print 'the word %s appears in the file %s times.' % each_item
+    for key, value in a_dictionary.items():
+        if value == 1:
+            # print type(key)
+            print 'The word "%s" appears in the file %d time.' % (key, value)
+        else:
+            print 'the word "%s" appears in the file %d times.' % (key, value)
 
 words = make_word_occurrence_dict(file_object)
 print_word_counts(words)
-
-# TODO get a count for the number that each word appears in the file,
-# NOT a straight up word count.
