@@ -12,3 +12,5 @@ for each_line in file_object:
     counter = counter + len(line_words)
 print counter
 
+# TODO get a count for the number that each word appears in the file,
+# NOT a straight up word count.
